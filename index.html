@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mayada Mohamed | Network, Systems & Cloud Infrastructure</title>
+<meta name="description" content="Mayada Mohamed - Networking, Windows Server administration and AWS cloud infrastructure portfolio">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#15396b;--deep:#0b2342;--sand:#f2f7fc;--white:#ffffff;--ink:#14263d;--mute:#546a82;--line:#d6e2ef;--amber:#19a7ee;--mint:#bfe3ff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--sand);color:var(--ink);font:400 1rem/1.7 'DM Sans',system-ui,sans-serif}
+h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15}
+a{color:inherit;text-decoration:none}ul{list-style:none}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.container{max-width:1080px;margin:0 auto;padding:0 22px}
+.navbar{position:sticky;top:0;z-index:10;background:var(--deep);color:var(--sand)}
+.nav-container{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font:800 1.2rem Sora,sans-serif}.logo i{color:var(--amber);font-size:1rem;margin-right:8px}
+.nav-menu{display:flex;gap:20px;font-size:.9rem;font-weight:500}
+.nav-link{opacity:.75;padding:4px 0;border-bottom:2px solid transparent}
+.nav-link:hover,.nav-link.active{opacity:1;border-color:var(--amber)}
+.menu-toggle{display:none;background:none;border:0;color:var(--sand);font-size:1.5rem;cursor:pointer}
+@media(max-width:900px){.menu-toggle{display:block}.nav-menu{display:none;position:absolute;top:64px;left:0;right:0;background:var(--deep);flex-direction:column;padding:14px 22px}.nav-menu.open{display:flex}}
+.hero{background:linear-gradient(135deg,#0b2342,#15396b);color:var(--sand);padding:72px 0 84px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-60px;background-image:radial-gradient(rgba(142,205,255,.28) 1.5px,transparent 1.5px);background-size:34px 34px;animation:drift 40s linear infinite}
+.hero::after{content:"";position:absolute;width:420px;height:420px;right:-120px;top:-120px;border-radius:50%;border:2px solid rgba(25,167,238,.35);box-shadow:0 0 0 60px rgba(25,167,238,.06),0 0 0 120px rgba(25,167,238,.04);animation:ring 6s ease-in-out infinite}
+.hero-container{position:relative;z-index:1}
+@keyframes drift{to{background-position:34px 34px}}
+@keyframes ring{50%{transform:scale(1.08);opacity:.6}}
+.cursor{color:var(--amber);animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.card,.proj,.edu{transition:transform .25s ease,box-shadow .25s ease}
+.card:hover,.proj:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(21,57,107,.14)}
+.hero h1{animation:rise 1s ease both}@keyframes rise{from{opacity:0;transform:translateY(20px)}}
+.hero-container{display:grid;gap:48px;align-items:center}
+@media(min-width:920px){.hero-container{grid-template-columns:1.15fr 1fr}}
+.badge{display:inline-flex;gap:8px;align-items:center;background:rgba(25,167,238,.14);color:var(--amber);border:1px solid rgba(25,167,238,.5);padding:5px 14px;border-radius:999px;font-weight:700;font-size:.85rem;margin-bottom:18px}
+.badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--amber)}
+.hero h1{font-size:clamp(2.6rem,8vw,4.7rem);font-weight:800;letter-spacing:-.03em}
+.role{font:700 clamp(1.1rem,3vw,1.5rem) Sora,sans-serif;color:var(--mint);margin:14px 0 16px;min-height:2.4em}
+.hero p.d{max-width:540px;opacity:.88;margin-bottom:26px}
+.btn{display:inline-block;padding:12px 24px;border-radius:8px;font-weight:700;margin:0 10px 10px 0;border:2px solid var(--amber)}
+.btn.p{background:var(--amber);color:var(--deep)}.btn:hover{background:var(--sand);border-color:var(--sand);color:var(--deep)}
+.social{display:flex;gap:12px}
+.social a{width:42px;height:42px;display:grid;place-items:center;border-radius:8px;border:1px solid rgba(242,247,252,.3)}
+.social a:hover{background:var(--amber);color:var(--deep);border-color:var(--amber)}
+.path{background:var(--deep);border:1px solid rgba(242,247,252,.15);border-radius:14px;padding:22px}
+.path h3{font:700 .95rem 'DM Sans',sans-serif;color:var(--mint);margin-bottom:12px}
+.hop{display:flex;align-items:center;gap:14px;padding:10px 12px;border-radius:10px;position:relative;animation:hop 8s infinite;animation-delay:calc(var(--i)*2s)}
+.hop:not(:last-child)::after{content:"";position:absolute;left:31px;top:52px;height:14px;border-left:2px dashed rgba(242,247,252,.25)}
+.hop i{width:40px;height:40px;border-radius:10px;background:rgba(242,247,252,.1);display:grid;place-items:center;flex:none;color:var(--amber)}
+.hop b{display:block;line-height:1.25}.hop span{font-size:.84rem;opacity:.7}
+@keyframes hop{0%,22%{background:rgba(25,167,238,.16)}28%,100%{background:transparent}}
+.section{padding:76px 0}.white{background:var(--white)}
+.title{margin-bottom:36px;border-left:6px solid var(--amber);padding-left:16px}
+.title h2{font-size:clamp(1.8rem,4vw,2.5rem);color:var(--forest)}.title p{color:var(--mute);margin-top:4px}
+.about{display:grid;gap:36px}@media(min-width:900px){.about{grid-template-columns:1.35fr 1fr}}
+.about h3{font-size:clamp(1.4rem,3vw,1.9rem);color:var(--forest);margin-bottom:16px}
+.about p{color:var(--mute);margin-bottom:14px}.about strong{color:var(--ink)}
+.strong-box{background:var(--forest);color:var(--sand);border-radius:14px;padding:26px}
+.strong-box h3{color:var(--amber);font-size:1.1rem;margin-bottom:14px}
+.strong-box div{display:flex;gap:14px;padding:12px 0;border-top:1px solid rgba(242,247,252,.18)}
+.strong-box i{color:var(--amber);margin-top:5px;width:22px;text-align:center}
+.strong-box b{display:block;line-height:1.3}.strong-box span{font-size:.9rem;opacity:.75}
+.edu{display:flex;gap:20px;align-items:center;background:var(--white);border:1px solid var(--line);border-left:6px solid var(--forest);border-radius:10px;padding:26px}
+.edu>i{font-size:2.2rem;color:var(--amber)}.edu h3{font-size:1.3rem}.edu p{color:var(--mute)}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.card{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--forest);border-radius:10px;padding:22px}
+.white .card{background:var(--sand)}
+.card>i{font-size:1.5rem;color:var(--amber);margin-bottom:10px;display:block}
+.card h3{font-size:1.1rem;margin-bottom:8px;color:var(--forest)}.card p{color:var(--mute);font-size:.95rem}
+.card li{color:var(--mute);font-size:.95rem;padding:3px 0 3px 18px;position:relative}
+.card li::before{content:"";position:absolute;left:0;top:13px;width:7px;height:7px;background:var(--amber);border-radius:2px}
+.problem{border-top-color:var(--amber)}
+.problem .q{font:700 1.05rem Sora,sans-serif;color:var(--forest);margin-bottom:8px}
+.problem .a{font-size:.92rem;color:var(--mute)}.problem .a b{color:var(--ink)}
+.timeline{border-left:3px solid var(--line);margin-left:8px}
+.ti{position:relative;padding:0 0 28px 28px}
+.ti::before{content:"";position:absolute;left:-10px;top:6px;width:17px;height:17px;background:var(--amber);border:3px solid var(--sand);border-radius:4px}
+.ti .date{font-weight:700;color:#1d6fc4;font-size:.9rem}.ti h3{font-size:1.2rem;color:var(--forest)}.ti h4{font-weight:700;font-size:.96rem}.ti p{color:var(--mute);margin-top:4px}
+.projects{display:grid;gap:20px}
+.proj{background:var(--sand);border:1px solid var(--line);border-radius:12px;padding:26px;display:grid;gap:16px}
+@media(min-width:760px){.proj{grid-template-columns:70px 1fr}}
+.pi{width:60px;height:60px;border-radius:12px;background:var(--forest);color:var(--amber);display:grid;place-items:center;font-size:1.6rem}
+.proj h3{font-size:1.3rem;color:var(--forest);margin-bottom:6px}.proj>div>p{color:var(--mute);margin-bottom:8px}
+.proj ul{margin-bottom:12px}.proj li{color:var(--mute);padding:2px 0 2px 20px;position:relative;font-size:.96rem}
+.proj li::before{content:"\f00c";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;left:0;color:var(--amber);font-size:.75rem;top:6px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}.tags span{background:var(--forest);color:var(--mint);font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:6px}
+.cert{display:flex;gap:14px;align-items:flex-start;border-top-width:1px;border-left:4px solid var(--amber)}
+.cert i{color:var(--amber);margin:5px 0 0}.cert b{display:block;line-height:1.3;color:var(--forest)}.cert span{font-size:.88rem;color:var(--mute)}
+.contact{display:grid;gap:30px}@media(min-width:900px){.contact{grid-template-columns:1fr 1fr}}
+.contact h3{font-size:1.7rem;color:var(--forest);margin-bottom:8px}.contact>div:first-child p{color:var(--mute)}
+.links{display:grid;gap:12px}
+.links a{display:flex;gap:14px;align-items:center;background:var(--forest);color:var(--sand);border-radius:10px;padding:15px 18px;font-weight:500;word-break:break-all}
+.links a:hover{background:var(--amber);color:var(--deep)}.links i{color:var(--amber);width:22px;text-align:center}.links a:hover i{color:var(--deep)}
+footer{background:var(--deep);color:var(--sand);text-align:center;padding:26px 0;font-size:.92rem;opacity:.95}footer span{color:var(--amber);font-weight:700}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="navbar"><div class="container nav-container">
+<a href="#home" class="logo"><i class="fas fa-network-wired"></i>Mayada</a>
+<nav class="nav-menu" id="navMenu" aria-label="Main">
+<a href="#home" class="nav-link active">Home</a><a href="#about" class="nav-link">About</a><a href="#education" class="nav-link">Education</a><a href="#skills" class="nav-link">Skills</a><a href="#experience" class="nav-link">Experience</a><a href="#solve" class="nav-link">What I Solve</a><a href="#projects" class="nav-link">Projects</a><a href="#certifications" class="nav-link">Certifications</a><a href="#contact" class="nav-link">Contact</a>
+</nav>
+<button class="menu-toggle" id="menuToggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+</div></header>
+
+<section id="home" class="hero"><div class="container hero-container">
+<div>
+<h1>Mayada Mohamed</h1>
+<p class="role"><span id="typing">Network &amp; Systems Administration</span><span class="cursor">|</span></p>
+<p class="d">I set up and secure the networks, Windows Server environments and AWS infrastructure that organizations depend on. IT graduate (2026) trained in CCNA and MCSA, with hands-on projects in Active Directory and AWS VPC.</p>
+<a href="#projects" class="btn p">View My Work</a><a href="#contact" class="btn">Contact Me</a>
+<div class="social">
+<a href="https://www.linkedin.com/in/mayada-m-abd-el-qader-5993052b8" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<a href="mailto:mayadammansour313@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+<a href="tel:+201094969546" aria-label="Phone"><i class="fas fa-phone"></i></a>
+</div>
+</div>
+<div class="path" aria-label="Request path through my AWS VPC project">
+<h3>How a request travels in my AWS project</h3>
+<div class="hop" style="--i:0"><i class="fas fa-globe"></i><div><b>Internet</b><span>External network</span></div></div>
+<div class="hop" style="--i:1"><i class="fas fa-door-open"></i><div><b>Internet Gateway + Route Tables</b><span>Entry into the VPC</span></div></div>
+<div class="hop" style="--i:2"><i class="fas fa-server"></i><div><b>Public EC2</b><span>Public subnet · secure SSH entry point</span></div></div>
+<div class="hop" style="--i:3"><i class="fas fa-lock"></i><div><b>Private EC2</b><span>Private subnet · outbound via NAT Gateway</span></div></div>
+</div>
+</div></section>
+
+<section id="about" class="section white"><div class="container">
+<div class="title"><h2>About Me</h2></div>
+<div class="about">
+<div>
+<h3>Does your network, server or cloud setup need to just work?</h3>
+<p>Are users missing the right accounts or permissions? Is the office network hard to troubleshoot? Are cloud servers exposed when they should be private?</p>
+<p><strong>That's where I can help.</strong></p>
+<p>I'm <strong>Mayada</strong>, an Information Technology graduate focused on network and infrastructure administration. I configure the services organizations rely on every day: <strong>Active Directory, DNS, DHCP, Group Policy and VPN</strong>, plus secure <strong>AWS networks</strong> with public and private subnets.</p>
+<p>My approach: <strong>understand the setup, configure it properly, give access only where it is needed, and test that it works.</strong></p>
+<p>I'm looking for an entry-level role in networking, system administration, IT infrastructure or cloud computing.</p>
+</div>
+<div class="strong-box">
+<h3>What I'm strongest at</h3>
+<div><i class="fab fa-windows"></i><section><b>Windows Server &amp; Active Directory</b><span>Domains, OUs, users, GPOs, DNS, DHCP, file services</span></section></div>
+<div><i class="fab fa-aws"></i><section><b>AWS network design</b><span>VPC, subnets, NAT, route tables, security groups, SSH via a public instance</span></section></div>
+<div><i class="fas fa-network-wired"></i><section><b>Network troubleshooting</b><span>CCNA fundamentals and a methodical approach</span></section></div>
+</div>
+</div>
+</div></section>
+
+<section id="education" class="section"><div class="container">
+<div class="title"><h2>Education</h2></div>
+<div class="edu"><i class="fas fa-graduation-cap"></i><div>
+<h3>Bachelor's Degree in Information Technology</h3>
+<p>The Egyptian E-Learning University (EELU)</p>
+<p>2022 – 2026 · Grade: Very Good</p>
+</div></div>
+</div></section>
+
+<section id="skills" class="section white"><div class="container">
+<div class="title"><h2>Skills</h2></div>
+<div class="grid">
+<div class="card"><i class="fas fa-network-wired"></i><h3>Networking</h3><ul><li>CCNA Fundamentals</li><li>Network Troubleshooting</li><li>DNS / DHCP</li><li>VPN</li></ul></div>
+<div class="card"><i class="fab fa-windows"></i><h3>Windows Server</h3><ul><li>Active Directory (AD DS)</li><li>Group Policy</li><li>File Services</li><li>Folder Redirection</li></ul></div>
+<div class="card"><i class="fab fa-aws"></i><h3>AWS Cloud</h3><ul><li>EC2 &amp; VPC</li><li>IAM &amp; S3</li><li>Security Groups</li><li>Route Tables, IGW, NAT Gateway</li></ul></div>
+<div class="card"><i class="fas fa-code"></i><h3>Programming</h3><ul><li>Python</li><li>Java &amp; C++</li><li>JavaScript</li><li>OOP &amp; Data Structures</li></ul></div>
+<div class="card"><i class="fas fa-laptop-code"></i><h3>Web &amp; Database</h3><ul><li>HTML &amp; CSS</li><li>Bootstrap</li><li>SQL</li></ul></div>
+<div class="card"><i class="fab fa-github"></i><h3>Tools</h3><ul><li>Git &amp; GitHub</li><li>Visual Studio Code</li><li>Microsoft Office</li></ul></div>
+</div>
+</div></section>
+
+<section id="experience" class="section"><div class="container">
+<div class="title"><h2>Experience &amp; Training</h2></div>
+<div class="timeline">
+<div class="ti"><span class="date">Training</span><h3>Front-End Development Intern</h3><h4>GDSC</h4><p>Built responsive web interfaces with HTML, CSS, Bootstrap and JavaScript, and collaborated through Git and GitHub.</p></div>
+<div class="ti"><span class="date">2025 – 2026</span><h3>Network &amp; Windows Server Training</h3><h4>CCNA &amp; MCSA</h4><p>Networking concepts, troubleshooting, and Windows Server administration with Active Directory, DNS, DHCP and Group Policy.</p></div>
+<div class="ti"><span class="date">2025 – 2026</span><h3>AWS Cloud Practice</h3><h4>Hands-on labs</h4><p>VPC design, EC2, IAM, routing, gateways and security groups.</p></div>
+</div>
+</div></section>
+
+<section id="solve" class="section white"><div class="container">
+<div class="title"><h2>Problems I Can Help Solve</h2><p>What I can take on in an entry-level role.</p></div>
+<div class="grid">
+<div class="card problem"><p class="q">Users and permissions are a mess</p><p class="a"><b>I can:</b> manage accounts, OUs, Group Policy and shared folders in Active Directory.</p></div>
+<div class="card problem"><p class="q">Devices can't get online or find each other</p><p class="a"><b>I can:</b> configure DNS, DHCP and VPN, and troubleshoot the connection step by step.</p></div>
+<div class="card problem"><p class="q">Cloud servers must be private but still reachable</p><p class="a"><b>I can:</b> build a VPC with public and private subnets, NAT, and secure SSH access.</p></div>
+<div class="card problem"><p class="q">A simple, responsive web page is needed</p><p class="a"><b>I can:</b> build it with HTML, CSS, Bootstrap and JavaScript.</p></div>
+</div>
+</div></section>
+
+<section id="projects" class="section"><div class="container">
+<div class="title"><h2>Projects</h2></div>
+<div class="projects">
+<div class="proj"><div class="pi"><i class="fab fa-aws"></i></div><div>
+<h3>AWS Cloud Infrastructure Project</h3>
+<ul><li>Created a VPC with public and private subnets</li><li>Deployed EC2 instances in both subnets</li><li>Configured Internet Gateway, NAT Gateway, Route Tables and Security Groups</li><li>Set up secure SSH from the public EC2 to the private EC2</li></ul>
+<div class="tags"><span>AWS</span><span>VPC</span><span>EC2</span><span>NAT Gateway</span><span>Security Groups</span></div></div></div>
+<div class="proj"><div class="pi"><i class="fab fa-windows"></i></div><div>
+<h3>Enterprise Network Administration Project</h3>
+<ul><li>Deployed Windows Server infrastructure with Active Directory Domain Services</li><li>Configured DNS, DHCP, Group Policy, VPN, File Services and Folder Redirection</li><li>Managed users, Organizational Units and security policies</li></ul>
+<div class="tags"><span>Windows Server</span><span>AD DS</span><span>GPO</span><span>DNS</span><span>DHCP</span><span>VPN</span></div></div></div>
+<div class="proj"><div class="pi"><i class="fas fa-graduation-cap"></i></div><div>
+<h3>Smart Educational Platform</h3>
+<p>Graduation project: an AI-powered platform that turns learning materials into interactive content.</p>
+<ul><li>Quiz, mind map, summary and presentation generation</li><li>Text-to-speech and AI lecture video generation</li><li>Backend development and AI integration with Laravel and Python</li></ul>
+<div class="tags"><span>Laravel</span><span>Python</span><span>AI</span></div></div></div>
+</div>
+</div></section>
+
+<section id="certifications" class="section white"><div class="container">
+<div class="title"><h2>Certifications</h2></div>
+<div class="grid">
+<div class="card cert"><i class="fas fa-award"></i><div><b>ITS: Device Configuration and Management</b><span>Certiport (Pearson VUE)</span></div></div>
+<div class="card cert"><i class="fas fa-award"></i><div><b>MCSA: Windows Server Administration</b><span>Windows Server training</span></div></div>
+<div class="card cert"><i class="fas fa-award"></i><div><b>CCNA: Introduction to Networks</b><span>Cisco Networking Academy</span></div></div>
+<div class="card cert"><i class="fas fa-award"></i><div><b>Python Essentials 1</b><span>Cisco Networking Academy</span></div></div>
+<div class="card cert"><i class="fas fa-award"></i><div><b>Front-End Development Training</b><span>GDSC</span></div></div>
+<div class="card cert"><i class="fas fa-award"></i><div><b>Mastering OOP with C++</b><span>ITI (Mahara-Tech)</span></div></div>
+<div class="card cert"><i class="fas fa-award"></i><div><b>Java SE Development</b><span>ITI (Mahara-Tech)</span></div></div>
+</div>
+</div></section>
+
+<section id="contact" class="section"><div class="container">
+<div class="title"><h2>Contact</h2></div>
+<div class="contact">
+<div><h3>Let's work together</h3><p>Hiring for an entry-level role in networking, system administration, IT infrastructure or cloud? I'd like to hear from you.</p><p style="margin-top:10px"><i class="fas fa-location-dot" style="color:var(--amber)"></i> Fayoum, Egypt</p></div>
+<div class="links">
+<a href="mailto:mayadammansour313@gmail.com"><i class="fas fa-envelope"></i>mayadammansour313@gmail.com</a>
+<a href="tel:+201094969546"><i class="fas fa-phone"></i>+20 109 496 9546</a>
+<a href="https://www.linkedin.com/in/mayada-m-abd-el-qader-5993052b8" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i>LinkedIn</a>
+</div>
+</div>
+</div></section>
+
+<footer><div class="container"><p>Designed &amp; built by <span>Mayada Mohamed</span></p><p>© 2026 All Rights Reserved.</p></div></footer>
+
+<script>
+const roles=["Network & Systems Administration","Windows Server & Active Directory","AWS Cloud Infrastructure","IT Infrastructure Support"],tel=document.getElementById("typing");
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches){let i=0,c=0,d=false;(function t(){const w=roles[i];tel.textContent=w.slice(0,c);if(!d&&c<w.length){c++;setTimeout(t,70)}else if(!d){d=true;setTimeout(t,1700)}else if(c>0){c--;setTimeout(t,35)}else{d=false;i=(i+1)%roles.length;setTimeout(t,300)}})()}
+const rv=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");rv.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".title,.card,.proj,.ti,.edu,.strong-box,.about>div,.contact>div,.links a").forEach((el,n)=>{el.classList.add("reveal");el.style.transitionDelay=(n%4)*80+"ms";rv.observe(el)});
+const menu=document.getElementById("navMenu");
+document.getElementById("menuToggle").onclick=()=>menu.classList.toggle("open");
+menu.querySelectorAll("a").forEach(a=>a.onclick=()=>menu.classList.remove("open"));
+const links=[...document.querySelectorAll(".nav-link")];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle("active",l.getAttribute("href")==="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("section[id]").forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
